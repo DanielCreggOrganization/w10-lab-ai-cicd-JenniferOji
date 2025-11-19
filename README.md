@@ -193,7 +193,7 @@ If your repository is public (or you have GitHub Advanced Security), you can ena
 4.  Commit this workflow. It will scan your code for vulnerabilities.
 5.  **Simulate a Vulnerability:** Add a hardcoded secret to your python file:
     ```python
-    # In app.py
+    # In hello_app/webapp.py
     AWS_SECRET_KEY = "AKIA1234567890"
     ```
 6.  When CodeQL runs, it will alert you in the **Security** tab.
@@ -279,7 +279,7 @@ Now, let's see if Copilot can critique *our* code.
 
 1.  Go back to VS Code (Codespaces).
 2.  Create a new branch: `git checkout -b bad-code-branch`.
-3.  Add some "questionable" code to `app.py` (or any python file):
+3.  Add some "questionable" code to `hello_app/webapp.py` (or any python file):
     ```python
     # Adding a debug print that shouldn't be in production
     def potentially_slow_function():
