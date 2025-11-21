@@ -80,7 +80,7 @@ Instead of writing YAML manually or copy-pasting, we will ask the AI Agent to cr
 2.  Enter the following prompt. Be specific about the filename and requirements!  
 **Prompt:**  
 
-    > Create a GitHub Actions workflow file named python-app.yml. It should run on push to the 'main' branch. It needs to install dependencies from requirements.txt, run flake8 for linting, and run tests using pytest. Name the workflow 'Python CI'.
+    > Create a GitHub Actions workflow file named python-app.yml. It should run on push to the 'main' branch. It needs to use Python 3.12, install dependencies from requirements.txt, run flake8 for linting, and run tests using `python -m pytest` to avoid import errors. Name the workflow 'Python CI'.
 
 3.  **Review the Plan:** The Agent will analyse your workspace and propose creating a new file path: `.github/workflows/python-app.yml`.
 
